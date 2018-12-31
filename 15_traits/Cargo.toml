@@ -1,0 +1,29 @@
+[package]
+name = "traits"
+version = "0.1.0"
+authors = ["Scott N Fitz <doctorwidget@gmail.com>"]
+edition = "2018"
+
+# there can only be one lib per project, and these are its specs
+[lib]
+name = "mylib"
+path = "src/lib.rs"
+
+# in contrast, there can be 0..N binaries per project, which means
+# we have to use this fugly array-of-objects notation. WTF TOML!
+[[bin]]
+name = "mybin"  
+path = "src/foo.rs"
+# nb: cargo must find at least one bin, but it does *not* need `name="main"`
+# And of course, the source path for the bin can map to anything
+# So the use of "main.rs" is pure convenience, not a requirement.
+
+# [[bin]]  # hypothetical other bin
+# name="otherbin"
+# path = "src/otherbin.rs
+
+# I've also read that, _all_ `*.rs` files inside `{root}/src/bin/*.rs` are
+# automagically treated as binaries even if there are no corresponding entries
+# here in Cargo.toml. TODO: read up on these issues and experiment with them!
+
+[dependencies]
