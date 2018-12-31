@@ -1,0 +1,9 @@
+[package]
+name = "collections"
+version = "0.1.0"
+authors = ["Scott N Fitz <doctorwidget@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.6.1"
+unicode-segmentation = "1.2.1"
