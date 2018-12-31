@@ -1,0 +1,7 @@
+[package]
+name = "data_types"
+version = "0.1.0"
+authors = ["Scott N Fitz <doctorwidget@gmail.com>"]
+edition = "2018"
+
+[dependencies]
