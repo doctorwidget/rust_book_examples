@@ -1,0 +1,24 @@
+[package]
+name = "testing"
+version = "0.1.0"
+authors = ["Scott N Fitz <doctorwidget@gmail.com>"]
+edition = "2018"
+
+# there can only be one lib per project, and these are its specs
+[lib]
+name = "mylib"
+path = "src/lib.rs"
+
+# we _could_ specify an explicit binary (or binaries) here, 
+# but we are sticking with the default `src/main.js`
+
+# Here's how you would specify 1..N binaries if you so chose
+# [[bin]]
+# name = "mybin"  
+# path = "src/foo.rs"
+
+# nb: cargo must find at least one bin, but it does *not* need either
+# `name="main"` *or* `path='src/main.rs'`
+# The automagic fallback to "src/main.rs" is pure cargo convention 
+
+[dependencies]
